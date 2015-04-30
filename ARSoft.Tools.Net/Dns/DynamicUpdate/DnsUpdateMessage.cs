@@ -1,5 +1,5 @@
 ﻿#region Copyright and License
-// Copyright 2010..2014 Alexander Reinert
+// Copyright 2010..2015 Alexander Reinert
 // 
 // This file is part of the ARSoft.Tools.Net - C# DNS client/server and SPF Library (http://arsofttoolsnet.codeplex.com/)
 // 
@@ -59,7 +59,7 @@ namespace ARSoft.Tools.Net.Dns.DynamicUpdate
 		public string ZoneName
 		{
 			get { return Questions.Count > 0 ? Questions[0].Name : null; }
-			set { Questions = new List<DnsQuestion>() { new DnsQuestion(value, RecordType.Soa, RecordClass.Any) }; }
+			set { Questions = new List<DnsQuestion>() { new DnsQuestion(value, RecordType.Soa, RecordClass.INet) }; }
 		}
 
 		/// <summary>
